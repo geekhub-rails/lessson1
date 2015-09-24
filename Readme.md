@@ -4,11 +4,12 @@ Readme
 1. Fork the repo: ![fork](http://kodi.wiki/images/d/d8/Github_fork.jpg)
 2. `git clone git@github.com:(username)/lesson1.git ~/lesson1`
 3. `cd ~/lesson1`
-4. `bundle`
-5. Do the tasks according to ruby style guide and make the tests pass
-6. `bundle exec rspec`
-7. `bundle exec rubocop`
-8. [Create the `Pull Request` to `geekhub-rails`](https://help.github.com/articles/using-pull-requests/)
+4. `sudo apt-get install bundler` in case when bundler was not installed
+5. `bundle`
+6. Do the tasks according to ruby style guide and make the tests pass
+7. `bundle exec rspec`
+8. `bundle exec rubocop`
+9. [Create the `Pull Request` to `geekhub-rails`](https://help.github.com/articles/using-pull-requests/)
 
 Tasks
 -
@@ -33,8 +34,8 @@ Tasks
 - Метод який повертає лише непарні числа
 - Метод який повертає лише числа кратні трьом
 - Метод який повертає лише унікальні числа
-- Метод який повертає масив елементи якого розділені на 10 і з наком після коми
-- Метод який повертає масив з симолами алфіту відповідні до індексу елементів масиву `(chars)`
+- Метод який повертає масив елементи якого розділені на 10 і з знаком після коми
+- Метод який повертає масив з символами алфавіту відповідно до індексу елементів масиву `(chars)`
 - Метод який повертає масив в якому максимальний та мінімальний елементи поміняні місьцями `(switch)`
 
 Команди `bundle exec rspec` та `bundle exec rubocop` мають бути зеленими
