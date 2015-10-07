@@ -6,6 +6,7 @@ Readme
 2. [screencasts](http://ruby.hasbrains.org/screencasts)
 3. [Git and Github](https://www.youtube.com/watch?v=uUuTYDg9XoI)
 
+IDE: (VIM/Atom/Sublime/RubyMine)
 
 1. Fork the repo: ![fork](http://kodi.wiki/images/d/d8/Github_fork.jpg)
 2. `git clone git@github.com:(username)/lesson1.git ~/lesson1`
