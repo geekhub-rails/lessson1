@@ -1,5 +1,6 @@
 Readme
 -
+[Ruby install](https://gist.github.com/galulex/2304847)
 
 1. [Monk](https://rubymonk.com/)
 2. [screencasts](http://ruby.hasbrains.org/screencasts)
