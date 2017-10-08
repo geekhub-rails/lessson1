@@ -14,7 +14,7 @@ RSpec.describe MyArray do
   it { expect(arr.multiple_to_three).to eql([3]) }
   it { expect(MyArray.new([1, 1]).uniq).to eql([1]) }
   it { expect(arr.devide_on_ten).to eql([0.1, 0.3, 0.2]) }
-  it { expect(arr.chars).to eql([:a, :c, :b]) }
+  it { expect(arr.chars).to eql(%i[a c b]) }
   it { expect(arr.switch).to eql([3, 1, 2]) }
   it { expect(arr.before_min).to eql([]) }
   it { expect(arr.three_smallest).to eql([1, 2, 3]) }
