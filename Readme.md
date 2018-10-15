@@ -6,6 +6,7 @@ Readme
 2. [screencasts](http://ruby.hasbrains.org/screencasts)
 3. [Git and Github](https://www.youtube.com/watch?v=uUuTYDg9XoI)
 4. [Git and Github](https://try.github.io)
+5. Connect CircleCI (bonus)
 
 IDE: (VIM/Atom/Sublime/RubyMine)
 
