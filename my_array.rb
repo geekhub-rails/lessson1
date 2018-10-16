@@ -6,19 +6,43 @@ class MyArray
   end
 
   def size
-    @array.size
+    # @array.size
+    size = 0
+    @array.each { size += 1 }
+    size
   end
 
   def reverse
-    @array.reverse
+    # @array.reverse
+    reverse_arr = []
+    @array.each { |n| reverse_arr.unshift(n) }
+    reverse_arr
   end
 
   def max
-    @array.max
+    # @array.max
+    max_value = nil
+    @array.each do |n|
+      if max_value.nil?
+        max_value = n
+      elsif max_value < n
+        max_value = n
+      end
+    end
+    max_value
   end
 
   def min
-    @array.min
+    # @array.min
+    min_value = nil
+    @array.each do |n|
+      if min_value.nil?
+        min_value = n
+      elsif min_value > n
+        min_value = n
+      end
+    end
+    min_value
   end
 
   def desc
@@ -55,9 +79,10 @@ class MyArray
   end
 
   def chars
-    chars_arr = []
-    @array.each { |n| chars_arr.push(n.chr.to_sym)}
-    chars_arr
+    chars_arr = ('a'..'z').map(&:to_s)
+    result = []
+    @array.each { |n| result.push(chars_arr[n - 1].to_sym) }
+    result
   end
 
   def switch
@@ -72,7 +97,7 @@ class MyArray
   end
 
   def before_min
-    min_index = a.index(a.min)
+    min_index = @array.index(@array.min)
     @array[0...min_index]
   end
 

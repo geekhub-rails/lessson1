@@ -7,15 +7,13 @@ class Lesson1
   end
 
   def age(birthday)
-    d, m, y = birthday.to_s.split('/')
-    is_valid = Date.valid_date? y.to_i, m.to_i, d.to_i
-    if is_valid
+    if birthday.is_a? String
       days = (Date.parse(birthday) - Date.today).to_i.abs
       years = days / 365
       hours = days * 24
       minutes = hours * 60
-      second = minutes * 60
-      "Я живу #{years} года или #{days} дней или #{hours} часов или #{minutes} минут или #{second} секунд"
+      "Я живу #{years} года или #{days} дней или #{hours}
+      часов или #{minutes} минут или #{minutes * 60} секунд"
     else
       'Invalid Date Format'
     end
