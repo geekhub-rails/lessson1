@@ -1,6 +1,19 @@
-machine:
-  ruby:
-    version: 2.4.1
-test:
-  post:
-    - bundle exec rubocop
+# Ruby CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-ruby/ for more details
+#
+version: 2
+jobs:
+  test:
+    docker:
+    - image: circleci/ruby:2.5.1
+    steps:
+    - checkout
+    - run: bundle
+    - run: bundle exec rspec
+    - run: bundle exec rubocop
+workflows:
+  version: 2
+  rubocop_and_rspec:
+    jobs:
+    - test
