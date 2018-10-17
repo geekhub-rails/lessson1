@@ -6,9 +6,7 @@ class MyArray
   end
 
   def size
-    size = 0
-    @array.each { |_x| size += 1 }
-    size
+    @array.size
   end
 
   def reverse
@@ -16,27 +14,11 @@ class MyArray
   end
 
   def max
-    max = 0
-    @array.each do |x|
-      if x > max
-        max = x
-      else
-        next
-      end
-    end
-    max
+    @array.max
   end
 
   def min
-    min = @array[0]
-    @array.each do |x|
-      if x < min
-        min = x
-      else
-        next
-      end
-    end
-    min
+    @array.min
   end
 
   def desc
@@ -60,15 +42,7 @@ class MyArray
   end
 
   def multiple_to_three
-    three = []
-    @array.each do |x|
-      if x % 3 == 0
-        three << x
-      else
-        next
-      end
-    end
-    three
+    @array.select { |x| (x % 3).zero? }
   end
 
   def uniq
@@ -76,21 +50,19 @@ class MyArray
   end
 
   def devide_on_ten
-    arrr = []
-    @array.each { |x| arrr << x.to_f / 10 }
-    arrr
+    @array.map { |x| x.to_f / 10 }
   end
 
   def chars
-    chars = []
-    @array.each { |x| chars << x.chr.to_sym }
-    chars
+    chars = *('a'..'z')
+    @array.map { |x| chars[x - 1].to_sym }
   end
 
   def switch
     a = @array.index(max)
     b = @array.index(min)
     c = @array.max
+
     @array[a] = @array[b]
     @array[b] = c
     @array
@@ -102,6 +74,6 @@ class MyArray
   end
 
   def three_smallest
-    # TODO
+    @array.sort.first(3)
   end
 end
