@@ -34,7 +34,7 @@ class MyArray
   end
 
   def multiple_to_three
-    @array.select {|x| (x % 3).zero?}
+    @array.select { |x| (x % 3).zero? }
   end
 
   def uniq
@@ -42,12 +42,12 @@ class MyArray
   end
 
   def devide_on_ten
-    @array.map {|x| x.to_f / 10}
+    @array.map { |x| x.to_f / 10 }
   end
 
   def chars
     alphabet = *('a'..'z')
-    @array.collect {|char| alphabet[char - 1].to_sym}
+    @array.collect { |char| alphabet[char - 1].to_sym }
   end
 
   def switch
