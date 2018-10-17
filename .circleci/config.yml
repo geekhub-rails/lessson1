@@ -12,3 +12,8 @@ jobs:
     - run: bundle
     - run: bundle exec rspec
     - run: bundle exec rubocop
+workflows:
+  version: 2
+  rubocop_and_rspec:
+    jobs:
+    - test
