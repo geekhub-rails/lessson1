@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/somenickname/lessson1.svg?style=svg)](https://circleci.com/gh/somenickname/lessson1)
+
 Readme
 -
 [Ruby install](https://gist.github.com/galulex/2304847)
