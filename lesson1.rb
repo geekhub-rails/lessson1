@@ -7,9 +7,9 @@ class Lesson1
   end
 
   def age(birthday)
-    ff = birthday.split('/').reverse.map(&:to_i)
+    date_parts = birthday.split('/').reverse.map(&:to_i)
     now = Time.now
-    birthday = Time.local(*ff)
+    birthday = Time.local(*date_parts)
     secs = (now - birthday).round
     h = convert_age(secs)
     p "Я живу #{h[:years]} года или #{h[:days]} дней или #{h[:hours]}

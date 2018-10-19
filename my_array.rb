@@ -22,15 +22,15 @@ class MyArray
   end
 
   def desc
-    @array.sort!.reverse!
+    @array.sort.reverse
   end
 
   def asc
-    @array.sort!
+    @array.sort
   end
 
   def odd
-    @array.select { |x| x if x.odd? }
+    @array.select(&:odd?)
   end
 
   def multiple_to_three
