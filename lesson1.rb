@@ -10,19 +10,25 @@ class Lesson1
     ff = birthday.split('/').reverse.map(&:to_i)
     now = Time.now
     birthday = Time.local(*ff)
-    @secs = (now - birthday).round
-    age_converter
-    p "Я живу #{@years} года или #{@days} дней или #{@hours}
-      часов или #{@mins} минут или #{@secs} секунд"
+    secs = (now - birthday).round
+    h = convert_age(secs)
+    p "Я живу #{h[:years]} года или #{h[:days]} дней или #{h[:hours]}
+      часов или #{h[:mins]} минут или #{secs} секунд"
   rescue StandardError
     'Invalid Date Format'
   end
 
-  def age_converter
-    @mins = @secs / 60
-    @hours = @mins / 60
-    @days = @hours / 24
-    @years = @days / 365
+  def convert_age(secs)
+    mins = secs / 60
+    hours = mins / 60
+    days = hours / 24
+    years = days / 365
+    {
+      mins: mins,
+      hours: hours,
+      days: days,
+      years: years
+    }
   end
 
   def name
