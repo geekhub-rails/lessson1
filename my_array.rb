@@ -6,58 +6,73 @@ class MyArray
   end
 
   def size
-    # TODO
+    @array.size
   end
 
   def reverse
-    # TODO
+    @array.reverse!
   end
 
   def max
-    # TODO
+    @array.max
   end
 
   def min
-    # TODO
+    @array.min
   end
 
   def desc
-    # TODO
+    @array.sort!.reverse!
   end
 
   def asc
-    # TODO
+    @array.sort!
   end
 
   def odd
-    # TODO
+    @array.select { |x| x if x.odd? }
   end
 
   def multiple_to_three
-    # TODO
+    @array.select { |x| x if (x % 3).zero? }
   end
 
   def uniq
-    # TODO
+    @array.uniq!
   end
 
   def devide_on_ten
-    # TODO
+    @array.collect { |x| x.to_f / 10 }
   end
 
   def chars
-    # TODO
+    alphabet_str = ' abcdefghijklmnopqrstuvwxyz'
+    arr = []
+    @array.each { |el| arr.push(alphabet_str[el].to_sym) }
+    arr
   end
 
   def switch
-    # TODO
+    index_min = @array.index(@array.min)
+    index_max = @array.index(@array.max)
+    arr = []
+    @array.each { |el| arr.push(el) }
+    arr[index_min] = @array.max
+    arr[index_max] = @array.min
+    arr
   end
 
   def before_min
-    # TODO
+    return [] if @array.empty?
+    index_min = @array.index(@array.min)
+    @array[0...index_min]
   end
 
   def three_smallest
-    # TODO
+    # arr = @array.clone
+    # arr_smallest = []
+    # arr_smallest.push(arr.delete(arr.min)).
+    # push(arr.delete(arr.min)).push(arr.delete(arr.min))
+    @array.sort[0..2]
   end
 end
