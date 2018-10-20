@@ -6,58 +6,78 @@ class MyArray
   end
 
   def size
-    # TODO
+    @array.length
   end
 
   def reverse
-    # TODO
+    @array.reverse
   end
 
   def max
-    # TODO
+    @array.max
   end
 
   def min
-    # TODO
+    @array.min
   end
 
   def desc
-    # TODO
+    @array.sort.reverse
   end
 
   def asc
-    # TODO
+    @array.sort
   end
 
   def odd
-    # TODO
+    @array.find_all { |i| odd?(i) }
   end
 
   def multiple_to_three
-    # TODO
+    @array.find_all { |i| (i % 3).zero? }
   end
 
   def uniq
-    # TODO
+    @array.uniq
   end
 
   def devide_on_ten
-    # TODO
+    ten = 10
+    result = []
+    @array.each do |item|
+      result.push item.to_f / ten.to_f
+    end
+    result
   end
 
   def chars
-    # TODO
+    chars = [nil, :a, :b, :c]
+    result = []
+    @array.each do |element|
+      result.push chars[element]
+    end
+    result
   end
 
   def switch
-    # TODO
+    @array.sort!.reverse!
+    r_element = @array.shift
+    @array.reverse!
+    @array.unshift r_element
   end
 
   def before_min
-    # TODO
+    index = @array.index(@array.min)
+    @array.take_while { |i| i < index }
   end
 
   def three_smallest
-    # TODO
+    @array.sort.first 3
+  end
+
+  private
+
+  def odd?(i)
+    (i % 2).odd?
   end
 end
