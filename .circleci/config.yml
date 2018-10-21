@@ -1,6 +1,10 @@
-machine:
-  ruby:
-    version: 2.4.1
-test:
-  post:
-    - bundle exec rubocop
+jobs:
+  build:
+    docker:
+      - image: circleci/ruby:rc-browsers-legacy
+    steps:
+      - checkout
+      - run: gem install bundler
+      - run: bundle install
+      - run: bundle exec rubocop
+      - run: bundle exec rspec
