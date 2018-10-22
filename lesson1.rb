@@ -6,7 +6,7 @@ class Lesson1
      sum
   end
 
-  def age(birthday)
+  def age(bday)
     # TODO
     d, m, y = bday.to_s.split('/')
    is_valid = Date.valid_date? y.to_i, m.to_i, d.to_i
